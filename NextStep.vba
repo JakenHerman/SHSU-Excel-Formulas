@@ -1,9 +1,9 @@
 Sub NextStep()
-'
-' NextStep Macro
-'
 
 '
+'Delete unneccesary columns and added needed ones
+'
+
     Columns("A:A").Select
     Selection.Delete Shift:=xlToLeft
     
@@ -41,6 +41,10 @@ Sub NextStep()
     Columns("Z:AB").Select
     Selection.Delete Shift:=xlToLeft
     
+'
+' Replace Yes and No Values to Y and N
+'
+    
     Columns("V:V").Select
     Selection.Replace What:="Yes", Replacement:="Y", LookAt:=xlPart, _
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
@@ -51,6 +55,10 @@ Sub NextStep()
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
         ReplaceFormat:=False
         
+'
+' Replace Ethinicity Text Values with Numeric Values
+'
+
     Columns("U:U").Select
     Selection.Replace What:="Black/African American", Replacement:="2", LookAt:=xlPart, _
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
@@ -75,5 +83,79 @@ Sub NextStep()
     Selection.Replace What:="American Indian", Replacement:="3", LookAt:=xlPart, _
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
         ReplaceFormat:=False
+        
+    Columns("U:U").Select
+    Selection.Replace What:="Other", Replacement:="0", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+        
+    Columns("U:U").Select
+    Selection.Replace What:="International", Replacement:="6", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+        
+    Columns("U:U").Select
+    Selection.Replace What:="", Replacement:="7", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+'
+' Change Student Type to Either F or T
+'
+    Columns("K:K").Select
+    Selection.Replace What:="High School Senior", Replacement:="F", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+    Columns("K:K").Select
+    Selection.Replace What:="High School Junior", Replacement:="F", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+    Columns("K:K").Select
+    Selection.Replace What:="High School Sophomore", Replacement:="F", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+    Columns("K:K").Select
+    Selection.Replace What:="High School Freshman", Replacement:="F", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+    Columns("K:K").Select
+    Selection.Replace What:="High School Senior", Replacement:="F", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+    Columns("K:K").Select
+    Selection.Replace What:="College Senior", Replacement:="T", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+    Columns("K:K").Select
+    Selection.Replace What:="College Junior", Replacement:="T", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+    Columns("K:K").Select
+    Selection.Replace What:="College Sophomore", Replacement:="T", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+    Columns("K:K").Select
+    Selection.Replace What:="College Freshman", Replacement:="T", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+    Columns("K:K").Select
+    Selection.Replace What:="Adult Learner", Replacement:="F", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+    Columns("K:K").Select
+    Selection.Replace What:="Transfer Student", Replacement:="T", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+        
                 
 End Sub
