@@ -218,6 +218,31 @@ Sub NextStep()
     Selection.Replace What:="N/A", Replacement:="", LookAt:=xlPart, _
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
         ReplacementFormat:=False
+
+'
+' Need to Select only first interest
+'
+
+
+'
+' Fix Major Column to match with Banner Code
+'
+    Columns("S:S").Select
+    Selection.Replace What:="Advertising", Replacement:="ARGD_BFA", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplacementFormat:=False
+     
+    Columns("S:S").Select
+    Selection.Replace What:="Aeronautical/Aerospace Engineering Technology/Technician", Replacement:="ETEC_BS", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplacementFormat:=False
+    
+    Columns("S:S").Select
+    Selection.Replace What:="Accounting", Replacement:="ACCT_BBA", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplacementFormat:=False
+    
+
         
     
 End Sub
