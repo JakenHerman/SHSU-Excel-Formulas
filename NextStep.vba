@@ -157,5 +157,67 @@ Sub NextStep()
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
         ReplaceFormat:=False
         
+'
+' Delete Graduate Students Entire Row
+'
+    
+    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
+        If Cells(i, 11) = "graduate student" Then Rows(i).Delete
+    Next
+    
+    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
+        If Cells(i, 11) = "Graduate Student" Then Rows(i).Delete
+    Next
+
+'
+' Change 'United States' to 'US'
+'
+
+    Columns("H:H").Select
+    Selection.Replace What:="United States", Replacement:="US", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
                 
+'
+' Delete all -999 fields in College CEEB Code Field
+'
+
+    Columns("R:R").Select
+    Selection.Replace What:="-999", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+        
+'
+' Delete all 9999 fields in High School Grad Date Column
+'
+    
+    Columns("O:O").Select
+    Selection.Replace What:="9999", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+        
+'
+' Delete all 99/99/9999 fields in BirthDate
+'
+    Columns("L:L").Select
+    Selection.Replace What:="99/99/9999", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+'
+' Fix Birthday column to follow proper formatting
+'
+    Columns("L:L").EntireColumn.AutoFit
+    Columns("L:L").Select
+    Selection.NumberFormat = "yyyy/mm/dd"
+    
+'
+' Make N/A Genders Blank
+'
+    Columns("T:T").Select
+    Selection.Replace What:="N/A", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplacementFormat:=False
+        
+    
 End Sub
