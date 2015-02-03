@@ -212,14 +212,6 @@ Sub NextStep()
     Selection.NumberFormat = "yyyy/mm/dd"
     
 '
-' Make N/A Genders Blank
-'
-    Columns("T:T").Select
-    Selection.Replace What:="N/A", Replacement:="", LookAt:=xlPart, _
-        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
-        ReplacementFormat:=False
-
-'
 ' Need to Select only first interest
 '
 
@@ -227,22 +219,21 @@ Sub NextStep()
 '
 ' Fix Major Column to match with Banner Code
 '
-    Columns("S:S").Select
-    Selection.Replace What:="Advertising", Replacement:="ARGD_BFA", LookAt:=xlPart, _
-        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
-        ReplacementFormat:=False
-     
-    Columns("S:S").Select
-    Selection.Replace What:="Aeronautical/Aerospace Engineering Technology/Technician", Replacement:="ETEC_BS", LookAt:=xlPart, _
-        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
-        ReplacementFormat:=False
-    
-    Columns("S:S").Select
-    Selection.Replace What:="Accounting", Replacement:="ACCT_BBA", LookAt:=xlPart, _
-        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
-        ReplacementFormat:=False
-    
 
+    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
+        If Cells(i, 19) = "Advertising" Then Columns("S:i").Select
+        Selection.Replace What:="Advertising", Replacement:="ARGD_BFA"
+    Next
+
+    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
+        If Cells(i, 19) = "Business" Then Columns("S:i").Select
+        Selection.Replace What:="Business", Replacement:="BUAD_BBA"
+    Next
+    
+    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
+        If Cells(i, 19) = "Criminal Justice/Security" Then Columns("S:i").Select
+        Selection.Replace What:="Criminal Justice/Security", Replacement:="CRIJ_BS"
+    Next
         
     
 End Sub
