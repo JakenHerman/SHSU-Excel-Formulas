@@ -188,6 +188,14 @@ Sub NextStep()
         ReplaceFormat:=False
         
 '
+' Delete all -999 fields in High School CEEB Code Field
+'
+
+    Columns("M:M").Select
+    Selection.Replace What:="-999", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'
 ' Delete all 9999 fields in High School Grad Date Column
 '
     
@@ -212,28 +220,26 @@ Sub NextStep()
     Selection.NumberFormat = "yyyy/mm/dd"
     
 '
+' Change Sheet Name for Next Module
+'
+    ActiveSheet.Select
+    ActiveSheet.Name = "Sheet1"
+    
+'
 ' Need to Select only first interest
 '
 
-
+    Columns("S:S").Replace What:=",*", Replacement:=""
+    Columns("S:S").Replace What:="/*", Replacement:=""
+    Columns("S:S").Replace What:="&*", Replacement:=""
+        
 '
 ' Fix Major Column to match with Banner Code
 '
 
-    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
-        If Cells(i, 19) = "Advertising" Then Columns("S:i").Select
-        Selection.Replace What:="Advertising", Replacement:="ARGD_BFA"
-    Next
-
-    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
-        If Cells(i, 19) = "Business" Then Columns("S:i").Select
-        Selection.Replace What:="Business", Replacement:="BUAD_BBA"
-    Next
-    
-    For i = ActiveSheet.UsedRange.Rows.Count To 1 Step -1
-        If Cells(i, 19) = "Criminal Justice/Security" Then Columns("S:i").Select
-        Selection.Replace What:="Criminal Justice/Security", Replacement:="CRIJ_BS"
-    Next
+    Columns("S:S").Replace What:="Advertising", Replacement:="ARGD_BFA"
+    Columns("S:S").Replace What:="Business", Replacement:="BUAD_BBA"
+    Columns("S:S").Replace What:="Criminal Justice", Replacement:="CRIJ_BS"
         
     
 End Sub
