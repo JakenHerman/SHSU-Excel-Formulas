@@ -284,6 +284,6 @@ Sub NextStep()
     Columns("S:S").Replace What:="Agroecology and Sustainable Agriculture", Replacement:="IAGR_BS_SC"
     Columns("S:S").Replace What:="Agronomy and Crop Science", Replacement:="IAGR_BS_SC"
     Columns("S:S").Replace What:="Albanian Language and Literature", Replacement:="GEST_BGS"
-
+    Columns("S:S").Replace What:="Art", Replacement:="ARSA_BA"
     
 End Sub
