@@ -220,12 +220,6 @@ Sub NextStep()
     Selection.NumberFormat = "yyyy/mm/dd"
     
 '
-' Change Sheet Name for Next Module
-'
-    ActiveSheet.Select
-    ActiveSheet.Name = "Sheet1"
-    
-'
 ' Need to Select only first interest
 '
 
@@ -240,6 +234,26 @@ Sub NextStep()
     Columns("S:S").Replace What:="Advertising", Replacement:="ARGD_BFA"
     Columns("S:S").Replace What:="Business", Replacement:="BUAD_BBA"
     Columns("S:S").Replace What:="Criminal Justice", Replacement:="CRIJ_BS"
+    Columns("S:S").Replace What:="Accounting", Replacement:="ACCT_BBA"
+    Columns("S:S").Replace What:="Accounting and Business", Replacement:="ACCT_BBA"
+    Columns("S:S").Replace What:="Accounting and Computer Science", Replacement:="ACCT_BBA"
+    Columns("S:S").Replace What:="Accounting and Finance", Replacement:="ACCT_BBA"
+    Columns("S:S").Replace What:="Accounting and Related Services", Replacement:="ACCT_BBA"
+    Columns("S:S").Replace What:="Accounting Technology", Replacement:="ACCT_BBA"
+    Columns("S:S").Replace What:="Acoustics", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Acting", Replacement:="THEA_BFA_FM"
+    Columns("S:S").Replace What:="Actuarial Science", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Acupuncture and Oriental Medicine", Replacement:="BIOL_BS_NURS"
+    Columns("S:S").Replace What:="Administration of Special Education", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Administrative Assistant and Secretarial Science", Replacement:="BUAD_BBA"
+    Columns("S:S").Replace What:="Adult and Continuing Education Administration", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Adult and continuing Education and Teaching", Replacement:="INST_BS"
+    Columns("S:S").Replace What:="Adult Development and Aging", Replacement:="HLTH_BS"
+    Columns("S:S").Replace What:="Adult Health Nurse", Replacement:="BIOL_BS_NURS"
+    Columns("S:S").Replace What:="Adult Literacy Tutor", Replacement:="INST_BS"
+    
+    
+    
         
     
 End Sub
