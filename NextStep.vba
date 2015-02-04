@@ -251,9 +251,39 @@ Sub NextStep()
     Columns("S:S").Replace What:="Adult Development and Aging", Replacement:="HLTH_BS"
     Columns("S:S").Replace What:="Adult Health Nurse", Replacement:="BIOL_BS_NURS"
     Columns("S:S").Replace What:="Adult Literacy Tutor", Replacement:="INST_BS"
-    
-    
-    
-        
+    Columns("S:S").Replace What:="Aeronautical", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Aeronautics", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Aerospace Ground Equipment Technology", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Aerospace Physiology and Medicine", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Aerospace", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Aesthetician", Replacement:="HLSC_BS"
+    Columns("S:S").Replace What:="African Languages", Replacement:="GEST_BGS"
+    Columns("S:S").Replace What:="African Studies", Replacement:="GEST_BGS"
+    Columns("S:S").Replace What:="African-American", Replacement:="GEST_BS"
+    Columns("S:S").Replace What:="Agribusiness", Replacement:="IAGB_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Business and Management", Replacement:="IAGB_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Economics", Replacement:="IAGB_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Business Technology", Replacement:="IAGB_BS_SC"
+    Columns("S:S").Replace What:="Agricultural and Domestic Animal Services", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural and Extension Education Services", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural and Food Products Processing", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural and Horticultural Plant Breeding", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Animal Breeding", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Communication", Replacement:="IAGB_BS_SC"
+    Columns("S:S").Replace What:="Agricultural communications", Replacement:="IAGb_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Engineering", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Mechanics and Equipment", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Mechanization", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Power Machinery Operation", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Production Operations", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Public Services", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Sciences", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural Teacher Education", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agricultural", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agriculture", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agroecology and Sustainable Agriculture", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Agronomy and Crop Science", Replacement:="IAGR_BS_SC"
+    Columns("S:S").Replace What:="Albanian Language and Literature", Replacement:="GEST_BGS"
+
     
 End Sub
