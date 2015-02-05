@@ -285,5 +285,11 @@ Sub NextStep()
     Columns("S:S").Replace What:="Agronomy and Crop Science", Replacement:="IAGR_BS_SC"
     Columns("S:S").Replace What:="Albanian Language and Literature", Replacement:="GEST_BGS"
     Columns("S:S").Replace What:="Art", Replacement:="ARSA_BA"
+    Columns("S:S").Replace What:="Criminal Justice", Replacement:="CRIJ_BS"
+    Columns("S:S").Replace What:="Education", Replacement:="INST_BS"
+    Columns("S:S").Replace What:="Music", Replacement:="MUSI_BA_FM"
+    Columns("S:S").Replace What:="Social Sciences", Replacement:="SOCI_BS"
     
 End Sub
+
+
