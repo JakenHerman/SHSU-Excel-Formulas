@@ -289,6 +289,21 @@ Sub NextStep()
     Columns("S:S").Replace What:="Education", Replacement:="INST_BS"
     Columns("S:S").Replace What:="Music", Replacement:="MUSI_BA_FM"
     Columns("S:S").Replace What:="Social Sciences", Replacement:="SOCI_BS"
+    Columns("S:S").Replace What:="Engineering Technology", Replacement:="IAGE_BS_SC"
+    Columns("S:S").Replace What:="Engineering", Replacement:="IAGE_BS_SC"
+    Columns("S:S").Replace What:="Foreign Language", Replacement:="SPAN_BA"
+    Columns("S:S").Replace What:="Mathematics", Replacement:="MATH_BA_SC"
+    Columns("S:S").Replace What:="Computer Science", Replacement:="COSC_BS_SC"
+    Columns("S:S").Replace What:="Environmental Science", Replacement:="ENVR_BS"
+    Columns("S:S").Replace What:="Environmental", Replacement:="ENVR_BS"
+    Columns("S:S").Replace What:="Environment", Replacement:="ENVR_BS"
+    Columns("S:S").Replace What:="Medicine", Replacement:="NURS_BSN_SC"
+    Columns("S:S").Replace What:="Science", Replacement:="AASC_BAAS_SC"
+    Columns("S:S").Replace What:="Health", Replacement:="HLSC_BS"
+    Columns("S:S").Replace What:="Law", Replacement:="POLS_BS_LAW"
+    Columns("S:S").Replace What:="Physical Therapy", Replacement:="BIOL_BS_PHYT"
+    Columns("S:S").Replace What:="Other", Replacement:="GEST_BGS"
+    
     
 End Sub
 
